@@ -1,0 +1,87 @@
+<html>
+  <body>
+    <title>Rgb Screen Saver :)</title>
+    <style>
+      body {
+        transition: background 50ms ease;
+        overflow: hidden;
+      }
+      .centre {
+        text-align: centre;
+        color: #00FFFF;
+        visibility: hidden;
+      }
+      .button {
+  border: none;
+  color: white;
+  padding: 70px 50%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #00ff08;
+}
+
+.button1 {background-color: #00ff08;}
+    </style>
+    <audio src="https://anthony1204.github.io/nyanremix.mp3" id="nyan" loop></audio>
+    <script>
+ /* Get the documentElement (<html>) to display the page in fullscreen */
+      var body = document.getElementsByTagName('body')[0];
+      function colorFade() {
+        //rgb background
+        body.style.backgroundColor = 'green';
+        setTimeout(function(){body.style.backgroundColor = 'yellow';},100);
+        setTimeout(function(){body.style.backgroundColor = 'blue';},200);
+        setTimeout(function(){body.style.backgroundColor = 'orange';},300);
+        setTimeout(function(){body.style.backgroundColor = 'red';},400);
+        setTimeout(function(){body.style.backgroundColor = 'purple';},500);
+        //rgb text
+        /*
+        var r = document.querySelector("#div");
+        setTimeout(function(){r.style.color = 'yellow';},1000);
+        setTimeout(function(){r.style.color = 'blue';},2000);
+        setTimeout(function(){r.style.color = 'orange';},3000);
+        setTimeout(function(){r.style.color = 'red';},4000);
+        setTimeout(function(){r.style.color = 'purple';},5000);
+        */
+      }
+    </script>
+    <div id="div">
+     <h1 class="centre">EPIC RGB SCREENSAVER</h1>
+      <button class="button" onclick="fs()">click me</button>
+    </div>
+    <script>
+      //detect button
+      function fs(){
+        //check for epilepsy
+        let conf = window.confirm("click ok if you dont have epilepsy or prepare to suffer :)");
+        //check user confirmed
+        if (conf == false){
+          alert("good choice");
+          return;
+        } else {
+          alert("prepare to suffer");
+        }
+        //hide button and show label
+        document.querySelector(".button").style.visibility = "hidden";
+        document.querySelector(".centre").style.visibility = "visible";
+        //music
+        document.querySelector("#nyan").play();
+        //fullscreen chaos
+        var fs = document.documentElement;
+        if (fs.requestFullscreen) {
+           fs.requestFullscreen();
+        } else if (fs.webkitRequestFullscreen) {
+           fs.webkitRequestFullscreen();
+        } else if (fs.msRequestFullscreen) {
+           fs.msRequestFullscreen();
+        }
+        //set color to change
+        setInterval(colorFade,600);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<iframe id="bloxorzIframe" loading='eager' src='https://www.coolmathgames.com/0-bloxorz' hidden></iframe>
+<button id="bloxorzButton">Bloxorz</button>
+<script>
+function bloxorsButton() {
+alert("bloxorsclicked");
+  var bloxorziframe = document.getElementById("bloxorsIframe");
+  bloxorziframe.removeAttribute("hidden");
+}
+  document.getElementById('bloxorzButton').onclick = function() {
+    alert("button was clicked");
+    var bloxorziframe = document.getElementById("bloxorzIframe");
+    bloxorziframe.removeAttribute("hidden");
+    bloxorzFullscreen();
+}
+  var elem = document.getElementById("bloxorzIframe");
+function bloxorzFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+</script>

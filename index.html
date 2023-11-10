@@ -1,0 +1,170 @@
+    <!DOCTYPE html>
+<html>
+<link rel="icon" type="image/png" href="favicon.png"/>
+    <meta name=”apple-mobile-web-app-capable” content="yes"						>
+        <audio id="cats" loop>
+  <source src="nyanremix.mp3" type="audio/mpeg">
+</audio>
+    <audio id="nope">
+  <source src="nope.mp3" type="audio/mpeg">
+</audio>
+    <audio id="sad">
+  <source src="sad.mp3" type="audio/mpeg">
+</audio>
+<style> 
+    body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+   #color {
+       border-color: #33ca47;
+       border-width: 5px;
+    }
+    if{
+      height:100%;
+      width=100%;
+      background-color:#0074FF;
+    }
+    </style>
+<head>
+    <title>random page</title>
+</head>
+<body>
+    <iframe id="if" src="IMG_0900.GIF" hidden></iframe>
+<form id="myForm">
+    <input type="password" maxlength=4 placeholder="enter 'meaw' here!" id="pswd">
+</form>
+<script type="text/javascript">
+    function checkPswd() {
+        var confirmPassword = "meaw";
+        var password = document.getElementById("pswd").value;
+        var input = document.getElementById("pswd");
+        if (password == confirmPassword) {
+            input.setAttribute("type","text");
+            input.value="redirecting...";
+             setTimeout(() => { window.location="yess.html";}, 500);
+            input.value=""
+            input.setAttribute("type","password");
+        }
+        else{
+            if (password.length == 4){
+                setTimeout(() => {},130);
+                input.value=""
+                if (document.getElementById("cats").playing){
+                    setTimeout(() => {document.getElementById("cats").play();},330);
+                }
+                document.getElementById("nope").play();
+          
+            }    
+        }
+    }
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.getElementById("if");
+var cats = document.getElementById("cats");
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+  cats.play();
+  elem.removeAttribute("hidden") 
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}      
+var form = document.getElementById("myForm");
+form.addEventListener("input", function () {
+        console.log("Form has changed!");
+        checkPswd();
+});
+    if (document.addEventListener)
+{
+ document.addEventListener('fullscreenchange', exitHandler, false);
+ document.addEventListener('mozfullscreenchange', exitHandler, false);
+ document.addEventListener('MSFullscreenChange', exitHandler, false);
+ document.addEventListener('webkitfullscreenchange', exitHandler, false);
+}
+
+function exitHandler()
+{
+ if (!document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement)
+ {
+  elem.setAttribute("hidden","");
+ }
+}
+    </script>
+    <p>  
+    </p>
+    <p>  
+    </p>
+    <img
+    src="https://placekitten.com/200/200"
+    alt="pic id code"
+    onClick="openFullscreen()"
+    role="button"
+    tabIndex="0"
+  /img>
+    <p id="color">click on the cat :)</p>
+    <h1>too late... its over... page got updated! use discord or wechat to contact me!!! discord: anthony4933 and state ur from school</h1>
+    <h2 id="demo">if you see this subscribe</h2>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 8, 2023 13:05:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "bye... by the time you see this im gone. phone: +86 178 6427 2035. discord: anthony4933. wechat/weixin (only contact that i know works in china): go into contacts, click the plus then click add contacts, then type anthonydacat to add me. make sure you send a message saying you are from my school.";
+  }
+}, 1000);
+</script>
+</body>
+</html>

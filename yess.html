@@ -1,0 +1,100 @@
+<p> yay </p>
+<title>this is a random title thing</title>
+<p id="demo" onclick="goBack()">click to go back</p>
+
+<script>
+function goBack() {
+    alert("redirecting...");
+    window.location = "index.html";
+}
+function load() {
+ tbo.play();   
+}
+tbo.play();
+</script>
+<body onload="tbo.play()">
+<audio id="tbo" loop>
+  <source src="tbo.mp3" type="audio/mpeg">
+</audio>
+    <h1>get catted!!!! CATTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</h1>
+    <p>
+        
+    </p>
+    <audio id="cats" loop>
+  <source src="nyand.mp3" type="audio/mpeg">
+</audio>
+    <audio id="nope">
+  <source src="nope.mp3" type="audio/mpeg">
+</audio>
+    <p>  
+    </p>
+    <img
+    src="http://placekitten.com/408/287"
+    alt="pic id code"
+    onClick="openFullscreen()"
+    role="button"
+    tabIndex="0"
+  /img>
+    <script>
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+var cats = document.getElementById("cats");
+
+/* View in fullscreen */
+function openFullscreen() {
+tbo.pause();
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+  cats.play();  
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}      
+</script>
+    <p id="color">click on the cat :)</p>
+    <meta name=”apple-mobile-web-app-capable” content=”yes “>
+    <script>
+function goBack() {
+    alert("redirecting...");
+    window.location = "index.html";
+}
+function load() {
+ tbo.play();   
+}
+tbo.play();
+    </script>      
+<meta name=”apple-mobile-web-app-capable” content=”yes “>
+    <style>
+       .passcodebutton {
+	      padding: 10px 20px;
+	       background-color: #0074FF;
+	       color: white;
+	    }
+     </style>
+	<button hidden class="passcodebutton" type="button" onclick="promptuser()" onClick="promptuser()">???</button>
+	<script>
+		function promptuser() {
+			let passcode = window.prompt("Enter passcode...","what could it be?");
+			if (passcode == "catz"){
+				window.location = "Success.html";
+			} else{
+				window.alert("nope");
+			}
+		}
+    </script>
+	<a href="/file/NintendoSwitchCartradgeHolderByAnthony.stl" download>download tinkercad nintendo switch game cartradge file</a>
+	<a href="/file/CatPaxV2.mcpack" download>download minecraft pack</a>
+</body>
